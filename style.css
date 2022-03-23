@@ -1,0 +1,39 @@
+body {
+  background-image: url("https://i1.wp.com/nerdizmo.uai.com.br/wp-content/uploads/sites/29/2020/06/Wallpaper-Minimalista-GEEKNESS-09.jpg?resize=800%2C594&ssl=1");
+  background-size: auto 100vh;
+  height: 100vh;
+  font-family: Arial; /* adicionando uma imagem ao fundo da pagina */
+}
+
+.menu {
+  background-color: white; /* fundo do menu */
+}
+.menu ul {
+  display: flex; /* deixar os menus um ao lado do outro*/
+  justify-content: space-around; /*espaço entre os ul*/
+}
+
+.menu li { 
+  list-style: none; /* retirar os pontinhos da lista*/
+}
+
+a {
+  color: teal;
+  text-decoration: none; /* retirar o sublinhado para posteriormente deixar somente qnd passar o mouse*/
+  
+}
+
+a:hover { 
+  text-decoration: underline; /* qnd passa o mouse aparece o sublinhado*/
+}
+
+.site-subtitle,
+.site-title {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.site-subtitle {
+  
+}
+
