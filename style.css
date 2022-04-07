@@ -1,12 +1,47 @@
+* { /*soft reset do CSS*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-image: url("https://i1.wp.com/nerdizmo.uai.com.br/wp-content/uploads/sites/29/2020/06/Wallpaper-Minimalista-GEEKNESS-09.jpg?resize=800%2C594&ssl=1");
   background-size: auto 100vh;
   height: 100vh;
-  font-family: Arial; /* adicionando uma imagem ao fundo da pagina */
+  font-family: Arial; /* adicionando uma imagem ao 
+  fundo da pagina */
+}
+/* se a tela tiver pelo menos 400px vai carr esses estilos */
+@media (min-width: 400px) {
+  body: {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) {
+  body: {
+    font-size: 18px;
+    font-family: 'Source Code Pro', monospace;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu {
   background-color: white; /* fundo do menu */
+  position: fixed;
+  width: 100vw;
+  top:1px;
+}
+
+.menu a {
+  display: block;
+  padding: 5px 50px;
 }
 .menu ul {
   display: flex; /* deixar os menus um ao lado do outro*/
@@ -20,7 +55,8 @@ body {
 a {
   color: teal;
   text-decoration: none; /* retirar o sublinhado para posteriormente deixar somente qnd passar o mouse*/
-  
+  font-family: 'Amatic SC', cursive;
+  font-size: 1em;
 }
 
 a:hover { 
@@ -33,7 +69,72 @@ a:hover {
   text-align: center;
 }
 
-.site-subtitle {
-  
+.site-title {
+  font-size: 4em;
+  font-family: 'Amatic SC', cursive;
+  line-height: 1.8em;
 }
+
+.site-subtitle {
+  font-style: italic;
+  font-size: 2em;
+  font-family: 'Amatic SC', cursive;
+  line-height: 1.8em;
+}
+
+.contato, 
+.portfolio {
+  font-family: 'Amatic SC', cursive;
+  color: whitesmoke;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.contato h2,
+.portfolio h2 {
+  font-family: 'Press Start 2P', cursive;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  font-size: 2em; 
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
+  }
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 240px;
+  object-fit: cover;
+  object-position: left bottom;
+  padding: 5px;
+  margin: 5px;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 2em;
+}
+
+
 
